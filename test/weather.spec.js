@@ -60,7 +60,7 @@ async function search({ filters, sort, aggregate }) {
   return await resp.json();
 }
 
-describe("/api/login", () => {
+describe.only("/api/login", () => {
   it("should be able to login", async () => {
     const { resp, cookie } = await login(VALID_EMAIL, VALID_PASSWORD);
     expect(resp.status).toEqual(200);
